@@ -43,7 +43,7 @@ RESEARCH PUBLICATIONS
 1. Digital Payments impact on Traditional Banking - IJPREMS ISSN 2583-1062
 2. Blockchain Adoption in Cross-Border Payments - IJCRT e-ISSN 2320-2882
 3. Impact of virtual reality on consumer experience - IJSMT 3108-1762
-`],{type:"text/plain"}),a=URL.createObjectURL(u),c=document.createElement("a");c.href=a,c.download="Munaf_Malik_DM_Resume.txt",document.body.appendChild(c),c.click(),c.remove(),URL.revokeObjectURL(a)};return h("div",{className:"min-h-screen bg-white text-slate-800 antialiased selection:bg-[#0f2c61] selection:text-white",style:{paddingTop:"var(--safe-area-inset-top)"},children:[p("style",{children:`
+`],{type:"text/plain"}),a=URL.createObjectURL(u),c=document.createElement("a");c.href=a,c.download="Munaf_Malik_DM_Resume.pdf",document.body.appendChild(c),c.click(),c.remove(),URL.revokeObjectURL(a)};return h("div",{className:"min-h-screen bg-white text-slate-800 antialiased selection:bg-[#0f2c61] selection:text-white",style:{paddingTop:"var(--safe-area-inset-top)"},children:[p("style",{children:`
         @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap');
         :root { --navy: #0f2c61; }
         html { scroll-behavior: smooth; scroll-padding-top: 96px; }
@@ -60,5 +60,25 @@ RESEARCH PUBLICATIONS
 </script>
   <script>(function(){function m(a){var h=a.getAttribute("href");if(!h)return;try{var u=new URL(h,document.baseURI);if((u.protocol==="http:"||u.protocol==="https:")&&u.host!==location.host){a.target="_blank";a.rel="noopener noreferrer";}}catch(e){}}function s(){document.querySelectorAll("a[href]").forEach(m);}if(document.readyState!=="loading"){s();}else{document.addEventListener("DOMContentLoaded",s);}document.addEventListener("click",function(e){var a=e.target&&e.target.closest&&e.target.closest("a[href]");if(a){m(a);}},true);})();</script>
   
+
+<script>
+setTimeout(()=>{
+  const buttons = Array.from(document.querySelectorAll('button'));
+  const resumeBtn = buttons.find(b=>b.textContent.includes('Resume'));
+  if(resumeBtn){
+    resumeBtn.onclick = function(e){
+      e.preventDefault();
+      const a=document.createElement('a');
+      a.href='./Resume.pdf';
+      a.download='Munaf_Malik_DM_Resume.pdf';
+      a.target='_blank';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      setTimeout(()=>window.open('./Resume.pdf','_blank'), 200);
+    };
+  }
+}, 1000);
+</script>
 </body>
 </html>
